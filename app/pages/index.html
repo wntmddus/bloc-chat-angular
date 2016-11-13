@@ -6,6 +6,19 @@
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
+
+    <div id="container" style="width:100%;">                                   
+        <div id="left" style="float:left; width:20%; background:lightgray"> 
+        <ul>
+        <li><a href='#'>Bloc Chat</a></li>
+        <li><a href="#">Room 1</a></li>
+        <li><a href="#">Room 2</a></li>
+        <li><a href="#">Room 3</a></li>
+      </ul>
+        </div>                     
+        <div id="right" style="float:right; width:80%;"> This is right panel </div>                  
+    </div>
+
     <script src="/scripts/app.js"></script>
     <!-- AngularJS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
@@ -13,6 +26,10 @@
     <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
     <!-- AngularFire -->
     <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    <script>
+        var myApp = angular.module('myApp', [ui-router]);
+    </script>
     <script>
       // Initialize Firebase
       var config = {
