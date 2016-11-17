@@ -5,6 +5,9 @@
 div.container {
     width: 100%;
     border: 1px solid gray;
+    background: lightgray;
+    height: 100vh;
+    
 }
 
 header, footer {
@@ -20,6 +23,7 @@ nav {
     max-width: 160px;
     margin: 0;
     padding: 1em;
+    height: 100vh;
 }
 .room {
     float: left;

@@ -1,0 +1,49 @@
+.wrap {
+    width: 100%;
+    overflow: auto;
+}
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+    background: lightgray;
+    height: 100vh;
+    
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+    height: 100vh;
+}
+.room {
+    float: left;
+    width: 33%;
+    background: lightblue;
+    height: 400px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}

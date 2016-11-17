@@ -1,20 +1,23 @@
-var app = angular.module("sampleApp", ["firebase"]);
+(function() {
+    function config($stateProvider, $locationProvider){
+        $locationProvider
+            .html5Mode({
+                enabled: true,
+                requireBase: false
+            });
 
-app.controller("SampleCtrl", function($scope, $firebaseObject) {
-    var ref = firebase.database().ref().child("message");
-    var auth = $firebaseAuth();
-    // download the data into a local object
-    $scope.messages = $firebaseObject(ref);
-    // putting a console.log here won't work, see below
-    $scope.addMessage = function() {
-        $scope.message.$add({
-            text: $scope.newMessageText
-        });
-    };
-    // login with Facebook
-    auth.$signInWithPopup("facebook").then(function(firebaseUser) {
-        console.log("Signed in as:", firebaseUser.uid);
-    }).catch(function(error) {
-        console.log("Authentication failed:", error);
-    });
-});
+        $stateProvider
+        
+            .state('room', {
+                url:'/',
+                controller: 'RoomCtrl as vm',
+                templateUrl: '/templates/room.html'
+            });
+    }
+
+
+
+    angular
+        .module('blocChat', ['ui.bootstrap', 'ui.router', 'firebase'])
+        .config(config);
+})();
