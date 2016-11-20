@@ -12,4 +12,6 @@
 		</div>
 	</section>
 </div>
-<div id="right" style="float:right; width:60%;"> This is right panel </div> 
+<div id="right" style="float:right; width:60%;">
+    <div ng-repeat="message in messages">{{message.content}}</div>
+</div> 

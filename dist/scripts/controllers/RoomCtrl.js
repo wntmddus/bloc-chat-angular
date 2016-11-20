@@ -2,10 +2,11 @@
 	function RoomCtrl($scope, Room, $uibModal){
 		$scope.chatRooms = Room.all;
         $scope.selectedRoom = null;
+        $scope.messages = null;
         
         $scope.selectRoom = function(room) {
 			$scope.selectedRoom = room;
-			$scope.messages = Room.getMessages(vm.selectedRoom.$id);
+			$scope.messages = Room.getMessages($scope.selectedRoom.$id);
 		}
 		
 		$scope.openModal = function() {
