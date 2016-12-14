@@ -11,7 +11,8 @@
                 rooms.$add({name: name});
             },
             getMessages: function(roomId) {
-                return $firebaseArray(messageRef.orderByChild('roomId').equalTo(roomId));
+                console.log($firebaseArray(messageRef.orderByChild('roomID').equalTo(roomId)));
+                return $firebaseArray(messageRef.orderByChild('roomID').equalTo(roomId));
             }
         }
     }

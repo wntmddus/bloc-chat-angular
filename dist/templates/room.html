@@ -14,8 +14,8 @@
 </div>
 <div class="col-md-9 chatroom">
 	<h3>{{ selectedRoom.name }}</h3>
-	<p ng-repeat="message in messages">
-		<strong>{{ message.username }} ({{ message.roomID }}):</strong>  {{ message.content }}
+	<p ng-repeat="message in messages" class="messages">
+		<strong>{{ message.username }} ({{ message.sentAt }}):</strong>  {{ message.content }}
 	</p>
 	
 	<form>
